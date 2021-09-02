@@ -18,14 +18,17 @@ class CreateCredencialsTable extends Migration
             $table->string("nombres");
             $table->string("apellidos");
             $table->string("cedula_identidad");
+            $table->string("ciudad");
             $table->string("cargo");
             $table->date("fecha_nacimiento");
             $table->string("tipo_sangre");
+            $table->string("correo")->nullable();
+            $table->string("celular")->nullable();
             $table->string("imagen")->nullable();
             $table->string("enlace_qr")->nullable();
             $table->timestamps();
             $table->softDeletes();
-        });
+        });   
     }
 
     /**

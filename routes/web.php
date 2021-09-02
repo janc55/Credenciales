@@ -23,3 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource("credencial", CredencialController::class);
+Route::get("/credencial/{id}/imprimir", [CredencialController::class, "imprimir"]);
+Route::get("/credencial/{id}/vista", [CredencialController::class, "vista"]);
